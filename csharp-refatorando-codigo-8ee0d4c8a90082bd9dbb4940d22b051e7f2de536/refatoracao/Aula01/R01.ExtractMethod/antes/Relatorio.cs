@@ -11,16 +11,16 @@ namespace refatoracao.Aula01.R01.ExtractMethod.antes
         void Imprimir()
         {
             decimal total = 0.0m;
-            var redid = new Pedido("José da Silva");
-            redid.AddItem("Dentozap", 2, 10m, 0m, 3m);
-            redid.AddItem("Voldax", 3, 10m, 0m, 3m);
-            redid.AddItem("Tranlab", 7, 10m, 0m, 3m);
+            var pedido = new Pedido("José da Silva");
+            pedido.AddItem("Dentozap", 2, 10m, 0m, 3m);
+            pedido.AddItem("Voldax", 3, 10m, 0m, 3m);
+            pedido.AddItem("Tranlab", 7, 10m, 0m, 3m);
 
             // imprimir itens
             Console.WriteLine("*****************************");
             Console.WriteLine("********** Itens ************");
             Console.WriteLine("*****************************");
-            foreach (var item in redid.Itens)
+            foreach (var item in pedido.Itens)
             {
                 decimal valorItem = item.Quantidade * item.PrecoBase;
                 Console.WriteLine($"{item.Desconto}: {item.Quantidade} unidades, R$ {valorItem}");
@@ -31,7 +31,7 @@ namespace refatoracao.Aula01.R01.ExtractMethod.antes
             Console.WriteLine("*****************************");
             Console.WriteLine("********** Resumo************");
             Console.WriteLine("*****************************");
-            Console.WriteLine("nome: " + redid.Cliente);
+            Console.WriteLine("nome: " + pedido.Cliente);
             Console.WriteLine("valor: " + total);
         }
     }
