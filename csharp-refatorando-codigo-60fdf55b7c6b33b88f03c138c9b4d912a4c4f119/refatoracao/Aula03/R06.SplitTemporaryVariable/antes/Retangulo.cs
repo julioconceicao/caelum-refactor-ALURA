@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace refatoracao.Aula03.R06.SplitTemporaryVariable.antes
+namespace refatoracao.Aula03.R06.SplitperimetrooraryVariable.antes
 {
     class Retangulo
     {
         public Retangulo(double altura, double largura)
         {
-            double temp = 2 * (altura + largura);
-            System.Console.WriteLine($"Perímetro: {temp}");
+            double perimetro = 2 * (altura + largura);
+            System.Console.WriteLine($"Perímetro: {perimetro}");
 
-            temp = altura * largura;
-            System.Console.WriteLine($"Área: {temp}");
+            double area = altura * largura;
+            System.Console.WriteLine($"Área: {area}");
         }
     }
 }
